@@ -1,0 +1,26 @@
+<form #form="ngForm" (submit)="onSubmit(form)">
+    <input type="hidden" name="retailerId" [value]="service.formData.retailerId">
+    <div class="form-group">
+         <label>Retailer First name</label>
+         <input class="form-control form-control lg" placeholder="Enter Firstname"
+          name="retailerFirstName" #retailerFirstName="ngModel" [(ngModel)]="service.formData.retailerFirstName">
+    </div>
+    <div class="form-group">
+        <label>Retailer Last name</label>
+        <input class="form-control form-control lg" placeholder="Enter Lastname"
+         name="retailerLastName" #retailerLastName="ngModel" [(ngModel)]="service.formData.retailerLastName">
+   </div>
+   <div class="form-group">
+    <label>Retailer Shop Address</label>
+    <input class="form-control form-control lg" placeholder="Enter shop Address"
+     name="retailerShopAddress" #retailerShopAddress="ngModel" [(ngModel)]="service.formData.retailerShopAddres">
+</div>
+<div class="form-group">
+    <label>Retailer Mobile Number</label>
+    <input class="form-control form-control lg" placeholder="Enter Mobile Number"
+     name="mobileNo" #mobileNo="ngModel" [(ngModel)]="service.formData.mobileNo">
+</div>
+<div class="form-group">
+    <button class="btn btn-primary" type="submit">SUBMIT</button>
+</div>
+</form>
